@@ -6,4 +6,5 @@ src = "src"
 title = "pacna.github.io"
 
 [output.html]
-default-theme="navy"
+default-theme = "ayu"
+git-repository-url = "https://github.com/pacna"
