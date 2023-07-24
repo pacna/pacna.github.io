@@ -11,7 +11,14 @@ run: ## Run the app
 .PHONY:generate
 generate: ## Generate the contents for the frontend
 ##
-	mkdbook build
+	mdbook build
+
+.PHONY:deploy
+deploy: ## Deploy to GH page
+##
+
+	make generate
+	bash deploy.sh
 
 .PHONY:help
 help: ## Show this help
