@@ -2,25 +2,27 @@
 ## The purpose of this Makefile is to simplify common development tasks.
 ## ----------------------------------------------------------------------
 ##
+## Usage:
+##   - make run: Start a local development server
+##   - make build: Generate frontend content
+##   - make deploy: Build and deploy to GitHub Pages
+##   - make help: Show available commands and descriptions
+##
 
 .PHONY:run
-run: ## Run the app
-##
+run:
 	mdbook serve
 
-.PHONY:generate
-generate: ## Generate the contents for the frontend
-##
+.PHONY:build
+build:
 	mdbook build
 
 .PHONY:deploy
-deploy: ## Deploy to GH page
-##
+deploy:
 
-	make generate
+	make build
 	bash deploy.sh
 
 .PHONY:help
-help: ## Show this help
-##
+help:
 	@sed -ne '/@sed/!s/##//p' $(MAKEFILE_LIST)

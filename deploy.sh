@@ -9,4 +9,4 @@ git checkout -b gh-pages
 git add .
 git commit -am "GH Page deploy"
 git push github gh-pages --force
-cd ../..
+cd ..
