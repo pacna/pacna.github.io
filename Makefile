@@ -5,7 +5,6 @@
 ## Usage:
 ##   - make run: Start a local development server
 ##   - make build: Generate frontend content
-##   - make deploy: Build and deploy to GitHub Pages
 ##   - make help: Show available commands and descriptions
 ##
 
@@ -16,12 +15,6 @@ run:
 .PHONY:build
 build:
 	mdbook build
-
-.PHONY:deploy
-deploy:
-
-	make build
-	bash deploy.sh
 
 .PHONY:help
 help:
